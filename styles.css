@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "studytime";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: oklch(96.5% 0.008 90);
+  --color-base-200: oklch(93.5% 0.01 88);
+  --color-base-300: oklch(88% 0.012 85);
+  --color-base-content: oklch(18% 0.015 160);
+
+  --color-primary: oklch(35% 0.045 170);
+  --color-primary-content: oklch(97% 0.01 90);
+
+  --color-secondary: oklch(28% 0.02 160);
+  --color-secondary-content: oklch(97% 0.01 90);
+
+  --color-accent: oklch(78% 0.1 55);
+  --color-accent-content: oklch(22% 0.04 50);
+
+  --color-neutral: oklch(18% 0.01 160);
+  --color-neutral-content: oklch(97% 0.01 90);
+
+  --color-info: oklch(62% 0.08 230);
+  --color-info-content: oklch(98% 0.01 230);
+  --color-success: oklch(55% 0.1 150);
+  --color-success-content: oklch(98% 0.01 150);
+  --color-warning: oklch(78% 0.12 75);
+  --color-warning-content: oklch(25% 0.04 75);
+  --color-error: oklch(55% 0.18 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 2rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --font-sans: "Instrument Sans", "Noto Kufi Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Noto Kufi Arabic", ui-serif, Georgia, serif;
+  --font-arabic: "Noto Kufi Arabic", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base-100 text-base-content font-sans text-base leading-relaxed antialiased;
+  }
+
+  [dir="rtl"] body,
+  [dir="rtl"] .font-display {
+    font-family: var(--font-arabic);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+@utility section-pad {
+  @apply px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20 lg:px-14 lg:py-24;
+}
+
+@utility display-xl {
+  @apply font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
+}
+
+@utility display-lg {
+  @apply font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem];
+}
+
+@utility body-lg {
+  @apply text-base sm:text-lg leading-relaxed text-base-content/70;
+}

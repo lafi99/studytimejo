@@ -1,0 +1,46 @@
+---
+description: Study Time Jordan website project conventions
+alwaysApply: true
+---
+
+# Study Time Website
+
+Static bilingual (EN/AR) marketing site for Study Time, a study house / coffee house in Al-Yasmeen, Amman.
+
+## Stack
+
+- Vite + Tailwind CSS 4 + daisyUI 5 (`index.html`, `styles.css`, `script.js`)
+- Custom theme `studytime` (brand colors)
+- Real place media lives in `media/` (videos, stills, `logo.jpg`)
+- Dev: `npm run dev` · Build: `npm run build` · Preview: `npm run preview`
+
+## Content rules
+
+- Prefer real photos/videos from the venue; do not use stock Unsplash imagery
+- Keep EN/AR copy in sync via `data-en` / `data-ar` on the same elements
+- Tone: welcoming but professional
+- Verified contacts:
+  - WhatsApp: +962 7 9540 8509 (`https://wa.me/962795408509`)
+  - Phone: +962 6 401 6985
+  - Instagram / Facebook: `@studytime.jo`
+  - Maps: `https://www.google.com/maps/place/Study+Time/@31.9170477,35.89116,17z/data=!3m1!4b1!4m6!3m5!1s0x151ca1a78e8197f7:0x29ce4c25b76ad972!8m2!3d31.9170477!4d35.89116!16s%2Fg%2F11t5yn44_f` (31.9170477, 35.89116)
+  - Apps: Google Play `com.studytimejo`, App Store id `6788083080`
+- Hours: daily 8:00 AM – 12:00 AM
+- Location: Jabal Arafat Street, Al-Yasmeen, Amman
+- Logo source: `C:\Users\Ahmad\Downloads\studyTime\logo.jpg` → `public/media/logo.jpg`
+- Media path: `public/media/`
+
+## Design
+
+- Follow `.cursor/skills/ui-design-brain` + `.cursor/skills/daisyui`
+- Use daisyUI components (`navbar`, `drawer`, `hero`, `btn`, `card`, `badge`, `list`, `menu`, `footer`, `link`)
+- Brand first; full-bleed hero video with logo as hero-level signal
+- Responsive: mobile-first (`px-4`, stacked CTAs, drawer nav < `lg`, `card-side` from `md`)
+- Typography utilities: `display-xl`, `display-lg`, `body-lg` (readable on small screens)
+- Support RTL when `dir="rtl"`
+- No stock imagery; no ticker/floating promo overlays
+
+## i18n
+
+- Language toggle updates `lang`, `dir`, `document.title`, and all `[data-en][data-ar]` nodes
+- Persist choice in `localStorage` key `studytime-language`
