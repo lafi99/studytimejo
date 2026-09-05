@@ -54,10 +54,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-base-100 text-base-content font-sans text-base leading-relaxed antialiased;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
   }
 
   [dir="rtl"] body,
@@ -70,25 +79,47 @@
   }
 }
 
+/* daisyUI drawer can expand past the viewport on small screens */
+.drawer {
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+}
+
+.drawer-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
 @utility font-display {
   font-family: var(--font-serif);
   font-weight: 400;
   letter-spacing: -0.03em;
-  line-height: 1.08;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @utility section-pad {
-  @apply px-4 py-14 sm:px-6 sm:py-16 md:px-10 md:py-20 lg:px-14 lg:py-24;
+  @apply px-4 py-12 sm:px-6 sm:py-16 md:px-10 md:py-20 lg:px-14 lg:py-24;
 }
 
 @utility display-xl {
-  @apply font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
+  @apply font-display text-[2rem] leading-tight sm:text-5xl md:text-6xl lg:text-7xl;
 }
 
 @utility display-lg {
-  @apply font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem];
+  @apply font-display text-[1.75rem] leading-tight sm:text-4xl md:text-5xl lg:text-[3.25rem];
 }
 
 @utility body-lg {
-  @apply text-base sm:text-lg leading-relaxed text-base-content/70;
+  @apply text-[0.95rem] sm:text-lg leading-relaxed text-base-content/70;
 }

@@ -108,15 +108,15 @@
 <body>
   <a class="skip-link btn btn-neutral btn-sm absolute left-2 top-[-100%] z-[100] focus:top-2" href="#main" data-en="Skip to main content" data-ar="تخطَّ إلى المحتوى الرئيسي">Skip to main content</a>
 
-  <div class="drawer drawer-end">
+  <div class="drawer drawer-end overflow-x-clip">
     <input id="nav-drawer" type="checkbox" class="drawer-toggle">
 
-    <div class="drawer-content flex min-h-screen flex-col">
-      <header class="navbar sticky top-0 z-50 min-h-16 border-b border-base-300 bg-base-100/95 px-3 backdrop-blur sm:min-h-[4.25rem] sm:px-6 lg:px-10">
-        <div class="navbar-start gap-2">
-          <a class="flex items-center gap-2 sm:gap-3" href="#home" aria-label="Study Time home">
-            <img class="mask mask-circle size-9 sm:size-10" src="media/logo.jpg" width="40" height="40" alt="Study Time">
-            <span class="text-sm font-bold tracking-[0.12em] uppercase sm:text-[0.9375rem]">Study Time</span>
+    <div class="drawer-content flex min-h-screen w-full max-w-full min-w-0 flex-col overflow-x-clip">
+      <header class="navbar sticky top-0 z-50 min-h-16 w-full max-w-full border-b border-base-300 bg-base-100/95 px-3 backdrop-blur sm:min-h-[4.25rem] sm:px-6 lg:px-10">
+        <div class="navbar-start min-w-0 gap-2">
+          <a class="flex min-w-0 items-center gap-2 sm:gap-3" href="#home" aria-label="Study Time home">
+            <img class="mask mask-circle size-9 shrink-0 sm:size-10" src="media/logo.jpg" width="40" height="40" alt="Study Time">
+            <span class="truncate text-sm font-bold tracking-[0.12em] uppercase sm:text-[0.9375rem]">Study Time</span>
           </a>
         </div>
 
@@ -141,22 +141,22 @@
       </header>
 
       <main id="main" class="flex-1">
-        <section class="hero relative min-h-[calc(100svh-4rem)] overflow-hidden text-neutral-content sm:min-h-[calc(100svh-4.25rem)]" id="home">
+        <section class="hero relative min-h-[calc(100svh-4rem)] w-full overflow-hidden text-neutral-content sm:min-h-[calc(100svh-4.25rem)]" id="home">
           <video class="absolute inset-0 h-full w-full object-cover" autoplay muted loop playsinline poster="media/hero.jpg" aria-hidden="true">
             <source src="media/tour-02.mp4" type="video/mp4">
           </video>
           <div class="hero-overlay bg-neutral/70!"></div>
-          <div class="hero-content w-full max-w-none items-end justify-start px-4 py-12 sm:px-6 sm:py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
-            <div class="max-w-2xl">
+          <div class="hero-content w-full max-w-full min-w-0 items-end justify-start px-4 py-10 sm:px-6 sm:py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+            <div class="w-full max-w-2xl min-w-0">
               <img class="mask mask-circle mb-4 size-16 shadow sm:mb-5 sm:size-20" src="media/logo.jpg" width="80" height="80" alt="Study Time logo">
               <p class="mb-3 text-xs font-bold tracking-[0.28em] sm:mb-4 sm:text-sm">STUDY TIME</p>
               <h1 class="display-xl mb-4 text-neutral-content sm:mb-5" data-en="A calm place to study, work, and breathe." data-ar="مكان هادئ للدراسة والعمل والراحة.">A calm place to study, work, and breathe.</h1>
-              <p class="mb-6 max-w-xl text-base leading-relaxed text-neutral-content/85 sm:mb-8 sm:text-lg" data-en="Your study house and coffee spot in Al-Yasmeen, Amman — open daily from 8 AM to midnight." data-ar="بيت الدراسة والقهوة في ضاحية الياسمين، عمّان — مفتوح يوميًا من 8 صباحًا حتى منتصف الليل.">Your study house and coffee spot in Al-Yasmeen, Amman — open daily from 8 AM to midnight.</p>
+              <p class="mb-6 max-w-xl text-[0.95rem] leading-relaxed text-neutral-content/85 sm:mb-8 sm:text-lg" data-en="Your study house and coffee spot in Al-Yasmeen, Amman — open daily from 8 AM to midnight." data-ar="بيت الدراسة والقهوة في ضاحية الياسمين، عمّان — مفتوح يوميًا من 8 صباحًا حتى منتصف الليل.">Your study house and coffee spot in Al-Yasmeen, Amman — open daily from 8 AM to midnight.</p>
               <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
-                <a class="btn btn-primary btn-md sm:btn-lg" href="https://wa.me/962795408509" target="_blank" rel="noreferrer">
+                <a class="btn btn-primary btn-md w-full sm:btn-lg sm:w-auto" href="https://wa.me/962795408509" target="_blank" rel="noreferrer">
                   <span data-en="Book a space" data-ar="احجز مساحتك">Book a space</span>
                 </a>
-                <a class="btn btn-outline btn-md border-neutral-content/50 text-neutral-content hover:border-neutral-content hover:bg-neutral-content hover:text-neutral sm:btn-lg" href="#spaces">
+                <a class="btn btn-outline btn-md w-full border-neutral-content/50 text-neutral-content hover:border-neutral-content hover:bg-neutral-content hover:text-neutral sm:btn-lg sm:w-auto" href="#spaces">
                   <span data-en="Explore the spaces" data-ar="استكشف المساحات">Explore the spaces</span>
                 </a>
               </div>
@@ -179,33 +179,33 @@
           </div>
 
           <div class="flex flex-col gap-5 sm:gap-6">
-            <article class="card card-border bg-base-100 md:card-side shadow-none">
-              <figure class="md:w-[52%] md:min-h-[17rem] lg:min-h-[19rem]">
-                <img class="h-full w-full object-cover" src="media/space-silent.jpg" alt="Silent Room glass study space at Study Time Amman" width="800" height="450" loading="lazy">
+            <article class="card card-border w-full max-w-full bg-base-100 shadow-none md:card-side">
+              <figure class="w-full md:w-[52%] md:min-h-[17rem] lg:min-h-[19rem]">
+                <img class="h-48 w-full object-cover sm:h-64 md:h-full" src="media/space-silent.jpg" alt="Silent Room glass study space at Study Time Amman" width="800" height="450" loading="lazy">
               </figure>
-              <div class="card-body justify-center gap-3 p-5 sm:p-6 md:p-8">
+              <div class="card-body min-w-0 justify-center gap-3 p-5 sm:p-6 md:p-8">
                 <span class="badge badge-outline badge-sm w-fit" data-en="No talking" data-ar="ممنوع الحديث">No talking</span>
                 <h3 class="card-title font-display text-2xl font-normal sm:text-3xl" data-en="Silent Room" data-ar="الغرفة الهادئة">Silent Room</h3>
                 <p class="body-lg m-0" data-en="Deep work only. No chatter — just you and the next page." data-ar="تركيز عميق فقط. بدون كلام — أنت والصفحة الجاية.">Deep work only. No chatter — just you and the next page.</p>
               </div>
             </article>
 
-            <article class="card card-border bg-base-100 md:card-side shadow-none">
-              <figure class="md:order-2 md:w-[52%] md:min-h-[17rem] lg:min-h-[19rem]">
-                <img class="h-full w-full object-cover" src="media/space-general.jpg" alt="General study desks with warm lighting at Study Time" width="800" height="450" loading="lazy">
+            <article class="card card-border w-full max-w-full bg-base-100 shadow-none md:card-side">
+              <figure class="w-full md:order-2 md:w-[52%] md:min-h-[17rem] lg:min-h-[19rem]">
+                <img class="h-48 w-full object-cover sm:h-64 md:h-full" src="media/space-general.jpg" alt="General study desks with warm lighting at Study Time" width="800" height="450" loading="lazy">
               </figure>
-              <div class="card-body justify-center gap-3 p-5 sm:p-6 md:p-8 md:order-1">
+              <div class="card-body min-w-0 justify-center gap-3 p-5 sm:p-6 md:p-8 md:order-1">
                 <span class="badge badge-outline badge-sm w-fit" data-en="Everyday" data-ar="يومي">Everyday</span>
                 <h3 class="card-title font-display text-2xl font-normal sm:text-3xl" data-en="General Hall" data-ar="القاعة العامة">General Hall</h3>
                 <p class="body-lg m-0" data-en="Warm desks, soft light, and a calm buzz that keeps you company." data-ar="مكاتب دافية، إضاءة هادية، وأجواء خفيفة تخلّيك مرتاح.">Warm desks, soft light, and a calm buzz that keeps you company.</p>
               </div>
             </article>
 
-            <article class="card card-border bg-base-100 md:card-side shadow-none">
-              <figure class="md:w-[52%] md:min-h-[17rem] lg:min-h-[19rem]">
-                <img class="h-full w-full object-cover" src="media/space-meeting.jpg" alt="Meeting room with projector and whiteboard at Study Time" width="800" height="450" loading="lazy">
+            <article class="card card-border w-full max-w-full bg-base-100 shadow-none md:card-side">
+              <figure class="w-full md:w-[52%] md:min-h-[17rem] lg:min-h-[19rem]">
+                <img class="h-48 w-full object-cover sm:h-64 md:h-full" src="media/space-meeting.jpg" alt="Meeting room with projector and whiteboard at Study Time" width="800" height="450" loading="lazy">
               </figure>
-              <div class="card-body justify-center gap-3 p-5 sm:p-6 md:p-8">
+              <div class="card-body min-w-0 justify-center gap-3 p-5 sm:p-6 md:p-8">
                 <span class="badge badge-outline badge-sm w-fit" data-en="Bookable" data-ar="للحجز">Bookable</span>
                 <h3 class="card-title font-display text-2xl font-normal sm:text-3xl" data-en="Meeting Room" data-ar="غرفة الاجتماعات">Meeting Room</h3>
                 <p class="body-lg m-0" data-en="Projector and whiteboard for tutoring, teamwork, or presentations — book by the hour or day." data-ar="بروجكتر وسبورة للدروس والعمل الجماعي أو العروض — احجز بالساعة أو باليوم.">Projector and whiteboard for tutoring, teamwork, or presentations — book by the hour or day.</p>
@@ -219,7 +219,7 @@
             <div>
               <p class="mb-3 text-xs font-bold tracking-[0.18em] text-neutral-content/60 uppercase sm:mb-4 sm:text-sm" data-en="Inside" data-ar="من جوّا">Inside</p>
               <h2 class="display-lg mb-4 text-neutral-content" data-en="See the space before you visit." data-ar="شوف المكان قبل ما تجي.">See the space before you visit.</h2>
-              <p class="body-lg m-0 text-neutral-content/70!" data-en="A short walk through our desks, silent room, and coffee corner — filmed in Al-Yasmeen." data-ar="جولة قصيرة على المكاتب والغرفة الهادئة وركن القهوة — مصوّرة في ضاحية الياسمين.">A short walk through our desks, silent room, and coffee corner — filmed in Al-Yasmeen.</p>
+              <p class="body-lg m-0 text-neutral-content/70!" data-en="A short walk through our desks, silent room, and coffee corner." data-ar="جولة قصيرة على المكاتب والغرفة الهادئة وركن القهوة.">A short walk through our desks, silent room, and coffee corner.</p>
             </div>
             <div class="overflow-hidden rounded-box border border-neutral-content/15 bg-neutral">
               <video class="mx-auto max-h-[28rem] w-full object-cover aspect-[9/16] sm:max-h-[32rem]" controls playsinline poster="media/amenities.jpg" preload="metadata">
@@ -277,7 +277,7 @@
         <section class="section-pad" id="visit">
           <div class="mb-8 max-w-2xl sm:mb-10">
             <p class="mb-3 text-xs font-bold tracking-[0.18em] text-base-content/55 uppercase sm:mb-4 sm:text-sm" data-en="Visit" data-ar="زورونا">Visit</p>
-            <h2 class="display-lg" data-en="Come say hello in Al-Yasmeen." data-ar="تعال سلّم علينا في ضاحية الياسمين.">Come say hello in Al-Yasmeen.</h2>
+            <h2 class="display-lg" data-en="Come visit us in Al-Yasmeen." data-ar="تعال زورنا في ضاحية الياسمين.">Come visit us in Al-Yasmeen.</h2>
           </div>
 
           <div class="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -303,29 +303,29 @@ Al-Yasmeen, Amman</p>
             <div class="card card-border bg-base-100 shadow-none md:col-span-2 xl:col-span-1">
               <div class="card-body gap-2 p-5 sm:p-6">
                 <h3 class="card-title font-display text-xl font-normal sm:text-2xl" data-en="Contact" data-ar="تواصل">Contact</h3>
-                <ul class="menu menu-md w-full bg-transparent p-0">
-                  <li>
-                    <a href="https://wa.me/962795408509" target="_blank" rel="noreferrer" class="justify-between">
+                <ul class="menu menu-md w-full max-w-full bg-transparent p-0">
+                  <li class="w-full">
+                    <a href="https://wa.me/962795408509" target="_blank" rel="noreferrer" class="flex w-full flex-wrap items-center justify-between gap-2">
                       <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
-                      <strong class="font-display text-base font-normal sm:text-lg" dir="ltr">+962 7 9540 8509</strong>
+                      <strong class="font-display text-sm font-normal sm:text-lg" dir="ltr">+962 7 9540 8509</strong>
                     </a>
                   </li>
-                  <li>
-                    <a href="tel:+96264016985" class="justify-between">
+                  <li class="w-full">
+                    <a href="tel:+96264016985" class="flex w-full flex-wrap items-center justify-between gap-2">
                       <span data-en="Phone" data-ar="هاتف">Phone</span>
-                      <strong class="font-display text-base font-normal sm:text-lg" dir="ltr">+962 6 401 6985</strong>
+                      <strong class="font-display text-sm font-normal sm:text-lg" dir="ltr">+962 6 401 6985</strong>
                     </a>
                   </li>
-                  <li>
-                    <a href="https://www.instagram.com/studytime.jo/" target="_blank" rel="noreferrer" class="justify-between">
+                  <li class="w-full">
+                    <a href="https://www.instagram.com/studytime.jo/" target="_blank" rel="noreferrer" class="flex w-full flex-wrap items-center justify-between gap-2">
                       <span>Instagram</span>
-                      <strong class="font-display text-base font-normal sm:text-lg">@studytime.jo</strong>
+                      <strong class="font-display text-sm font-normal sm:text-lg">@studytime.jo</strong>
                     </a>
                   </li>
-                  <li>
-                    <a href="https://www.facebook.com/studytime.jo/" target="_blank" rel="noreferrer" class="justify-between">
+                  <li class="w-full">
+                    <a href="https://www.facebook.com/studytime.jo/" target="_blank" rel="noreferrer" class="flex w-full flex-wrap items-center justify-between gap-2">
                       <span>Facebook</span>
-                      <strong class="font-display text-base font-normal sm:text-lg">studytime.jo</strong>
+                      <strong class="font-display text-sm font-normal sm:text-lg">studytime.jo</strong>
                     </a>
                   </li>
                 </ul>
@@ -346,7 +346,7 @@ Al-Yasmeen, Amman</p>
         </section>
       </main>
 
-      <footer class="footer footer-vertical sm:footer-horizontal bg-neutral p-6 text-neutral-content sm:p-10">
+      <footer class="footer footer-vertical w-full max-w-full bg-neutral p-6 text-neutral-content sm:footer-horizontal sm:p-10">
         <aside class="gap-3">
           <a class="flex items-center gap-3" href="#home">
             <img class="mask mask-circle size-10" src="media/logo.jpg" width="40" height="40" alt="Study Time">
